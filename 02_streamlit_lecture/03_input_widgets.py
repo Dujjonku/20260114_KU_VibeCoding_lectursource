@@ -38,7 +38,7 @@ st.subheader("여러 줄 입력")
 message = st.text_area(
     "메시지를 입력하세요:",
     placeholder="여기에 메시지를 작성하세요...",
-    height=150
+    height=300 #박스높이값
 )
 if message:
     st.info(f"입력한 글자 수: {len(message)}자")
@@ -63,7 +63,7 @@ st.write(f"입력한 나이: {age}세")
 price = st.number_input(
     "가격:",
     min_value=0.0,
-    value=10000.0,
+    value=100000.0,
     step=1000.0,
     format="%.2f"
 )
@@ -100,7 +100,7 @@ st.header("3. 선택 위젯")
 st.subheader("드롭다운")
 city = st.selectbox(
     "도시를 선택하세요:",
-    ["서울", "부산", "대구", "인천", "광주", "대전", "울산"],
+    ["서울", "부산", "대구", "인천", "광주", "대전","충남", "울산"],
     index=0
 )
 st.write(f"선택한 도시: {city}")

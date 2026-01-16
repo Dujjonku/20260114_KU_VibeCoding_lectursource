@@ -49,17 +49,20 @@ col1, col2 = st.columns(2)
 with col1:
     st.write("**왼쪽 컬럼**")
     st.button("버튼 1", use_container_width=True)
+    st.button("버튼 3", use_container_width=True)
+
 
 with col2:
     st.write("**오른쪽 컬럼**")
     st.button("버튼 2", use_container_width=True)
+    st.button("버튼 4", use_container_width=True)
 
 
 # 구분선
 st.divider()
 
 st.subheader("3개 컬럼 (1:2:1 비율)")
-col1, col2, col3 = st.columns([1, 2, 1])
+col1, col2, col3 = st.columns([37, 25, 16])
 
 with col1:
     st.metric("사용자", "1,234", "+12%")
@@ -77,7 +80,7 @@ with col3:
 st.divider()
 st.header("2. 탭 레이아웃")
 
-tab1, tab2  = st.tabs(["⚙️ 설정", "ℹ️ 정보"])
+tab1, tab2, tab3  = st.tabs(["⚙️ 설정", "ℹ️ 정보", "나의 비밀일기장..."])
 
 with tab1:
     st.subheader("설정 탭")
@@ -95,6 +98,10 @@ with tab2:
     **개발자**: Streamlit Team  
     **라이선스**: MIT
     """)
+
+
+with tab3:
+    st. subheader("나의 비밀일기..")
 
 # ============================================
 # 4. 확장 가능한 섹션 (Expander)
