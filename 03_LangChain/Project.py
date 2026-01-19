@@ -15,16 +15,13 @@ from langchain_core.runnables import RunnablePassthrough
 
 # 1. 페이지 기본 설정
 st.set_page_config(page_title="나만의 RAG 챗봇", page_icon="🤖")
-st.title("🤖 PDF 기반 RAG 챗봇")
+st.title("🧆 두쫀쿠 킬러의 기반 RAG 챗봇")
 
 # 사이드바: 설정 및 입력
 with st.sidebar:
     st.header("설정 (Configuration)")
     
-    # API KEY 입력
-    openai_api_key = st.text_input("OpenAI API Key", type="password")
-
-    st.markdown("---")
+ 
     
     # 2. 문서 업로드 및 카테고리 선택
     st.subheader("문서 업로드 & 선택")
